@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* a{
+            display: block;
+        
+        }
+        a:link{
+            color: rgb(12, 117, 28);
+        }
+        a:hover{
+            background-color: aqua;
+        }
+        a:nth-of-type(3):visited{
+            color: red;
+        }
+        a:active{
+            color: yellow;
+            font-size: 22px;
+        }*/
+
+ /*       input:focus{
+            background-color: rgb(8, 174, 53);
+            color: rgb(44, 0, 176);
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            
+        }
+    input[type="text"]{
+            background-color: aqua;
+            color: red;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            
+        }
+
+input[type="checkbox"]:checked + label{
+    color: red;
+}
+
+input:required{
+    background-color: pink;
+}
+
+input:disabled{
+    background-color: rgb(120, 19, 19); 
+    opacity: 0.2;
+}*/
+/*
+input:enabled{
+    outline: 1px solid ;
+}*/
+/*
+input:in-range{
+    color: green;
+}
+
+input:out-of-range{
+    color: red;
+}
+
+input:read-write{
+    outline: 1px solid  purple;
+    outline-offset: 2px;
+}
+input:read-only{
+    outline: 2px solid  rgb(255, 0, 0);
+    outline-offset: 2px;
+}
+*/
+
+select option:default{
+    color: red;
+}
+
+
+input:valid{
+    color: green;
+}
+input:invalid{
+    color: red;
+}
+
+
+:root{
+    --bgcolor:red;
+}
+h1{
+    color: var(--bgcolor);
+}
+
+    </style>
+</head>
+<body>
+    <h1>Form</h1>
+        <a href="#">Home</a><br>
+    <a href="#">Contact</a><br>
+    <a href="#">About</a><br>
+    <a href="#">Visit here</a><br>
+
+    <form>
+        <label>Name</label>
+        <input type="text"/><br>
+
+        <label>Father Name</label>
+        <input type="text" readonly value="kdbs"/><br>
+
+        <label>Address ( required )</label>
+        <input type="text" required/><br>
+        <label>Disabled</label>
+        <input type="text" disabled/><br>
+        <label>Enabled</label>
+        <input type="text"/><br>
+
+
+        <label>Number</label>
+        <input type="number" min="25" max="30"/><br>
+
+        <input type="checkbox"/>
+        <label>ajsbcasj</label>
+        <input type="checkbox" checked/>
+        <label>ajsbcasj</label>
+        <input type="checkbox"/>
+        <label>ajsbcasj</label>
+
+        <select>
+            <option value="hasdha">sjds</option>
+            <option value="hasdha" selected>sjds</option>
+            <option value="hasdha">sjds</option>
+            <option value="hasdha">sjds</option>
+            <option value="hasdha">sjds</option>
+        </select>
+<br><br>
+        <label>Email iD</label>
+        <input type="email"/>
+
+<input type="submit"/>
+    </form>
+
+
+</body>
+</html>

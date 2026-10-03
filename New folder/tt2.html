@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            outline: 4px dashed rgb(29, 112, 112);
+            outline-offset: 5px;
+            width: 85vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+            column-gap: 100px;
+            
+            /*grid-template-rows: repeat(3, 1fr);*/
+          /*  grid-auto-rows: minmax(250px, auto);
+            grid-auto-columns: minmax(150px, auto);*/
+            
+        }
+        .items{
+            border: 4px solid;
+            width: 100px;
+            height: 120px;
+        }
+  /*      #item-1{
+            border: 4px solid red;
+            font-size: 32px;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+        }
+        #item-2{
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        #item-3{
+            border: 4px solid rgb(0, 255, 38);
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #item-4{
+            border: 4px solid rgb(0, 21, 255);
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="item-1">box 1</div>
+        <div class="items" id="item-2">a ratione, libero illo doloribus dolore? Itaque porro nemo veritatis, la neque cum doloremque maiores, rem ipsamillo doloribus dolore? Itaque porro nemo veritatis, la neque cum doloremque maiores, rem ipsamillo doloribus dolore? Itaque porro nemo veritatis, la neque cum doloremque maiores, rem ipsamillo doloribus dolore? Itaque porro nemo veritatis, la neque cum doloremque maiores, rem ipsam.</div>
+        <div class="items" id="item-3">box 3</div>
+        <div class="items" id="item-4">box 4</div>
+    </div>
+</body>
+</html>

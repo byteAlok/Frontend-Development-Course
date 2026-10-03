@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar Example</title>
+    <style>
+        /* 🌿 Basic container to show scrollbar */
+        .scroll-box {
+            width: 400px;
+            height: 250px;
+            border: 2px solid #333;
+            padding: 15px;
+            overflow-y: scroll;
+            /* enable vertical scroll */
+            background: #fafafa;
+        }
+
+        .content {
+            height: 600px;
+            /* just to make it scrollable */
+            line-height: 1.6;
+        }
+
+        /* 🌈 WebKit Browsers (Chrome, Edge, Safari) */
+        ::-webkit-scrollbar {
+            width: 12px;
+            /* scrollbar width */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #eee;
+            /* background of track */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff8a00, #e52e71);
+            border-radius: 10px;
+            /* round edges */
+            border: 2px solid #eee;
+            /* space around thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ff5500, #b51e5c);
+        }
+
+        /* 🦊 Firefox Support */
+        * {
+            scrollbar-width: thin;     /* "auto" | "thin" | "none" */
+            scrollbar-color: #e52e71 #eee;    /* thumb color | track color */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🎨 Custom Scrollbar Example</h2>
+    <div class="scroll-box">
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec vel sagittis justo. Nulla facilisi. Duis nec risus magna.
+                In hac habitasse platea dictumst.
+            </p>
+            <p>
+                Suspendisse potenti. Vestibulum fringilla, mi vel accumsan faucibus,
+                nisi erat sodales erat, ac efficitur eros ipsum in ex.
+            </p>
+            <p>
+                Vivamus suscipit interdum elit, in tincidunt magna lacinia eget.
+                Integer sit amet sapien sed metus mattis iaculis.
+            </p>
+            <p>
+                Morbi id nulla urna. Donec ac nisi sit amet orci posuere feugiat vel sed odio.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

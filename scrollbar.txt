@@ -1,0 +1,69 @@
+🧭 2️⃣ Scrollbar Pseudo-elements (Full List)
+
+| Selector                               | Description                                 | Typical Usage                           |
+| -------------------------------------- | ------------------------------------------- | --------------------------------------- |
+| `::-webkit-scrollbar`                  | Entire scrollbar box                        | width, background, border               |
+| `::-webkit-scrollbar-track`            | Scrollbar ka background path                | background-color, border-radius         |
+| `::-webkit-scrollbar-thumb`            | Movable draggable part                      | background, border-radius, hover styles |
+| `::-webkit-scrollbar-thumb:hover`      | On hover                                    | color change, shadow                    |
+| `::-webkit-scrollbar-button`           | Up/Down arrows                              | size, background, hide them             |
+| `::-webkit-scrollbar-corner`           | Junction between horizontal & vertical bars | match background color                  |
+| `::-webkit-resizer`                    | Resize icon (if applicable)                 | cursor: se-resize; background           |
+| `::-webkit-scrollbar-track-piece`      | Track ka visible segment                    | (deprecated)                            |
+| `::-webkit-scrollbar-thumb:active`     | While dragging                              | darken thumb color                      |
+| `::-webkit-scrollbar-button:increment` | Down/right button                           | different styling if needed             |
+| `::-webkit-scrollbar-button:decrement` | Up/left button                              | different styling if needed             |
+
+_____________________________________________________________________________________________________________________________________
+
+
+/* Always visible parts (modern Chrome safe) */
+    .scroll::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    .scroll::-webkit-scrollbar-track {
+      background: #ddd;
+      border-radius: 10px;
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ff8a00, #e52e71);
+      border-radius: 10px;
+    }
+
+    .scroll::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #ff5500, #b51e5c);
+    }
+
+    /* Firefox support */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #e52e71 #ddd;
+    }
+
+✅ Works 100% on latest Chrome, Edge, Firefox
+✅ Shows track, thumb, hover effect clearly
+❌ Hides buttons, corner, resizer (as Chrome no longer shows them normally)
+
+🧠 Summary ------------------------
+
+| Part                              | Works in Chrome (2025) | Notes                           |
+| --------------------------------- | ---------------------- | ------------------------------- |
+| `::-webkit-scrollbar`             | ✅                      | Controls width & overall box   |
+
+| `::-webkit-scrollbar-track`       | ✅                      | Background of scrollbar path   |
+
+| `::-webkit-scrollbar-thumb`       | ✅                      | Draggable part                 |
+
+| `::-webkit-scrollbar-thumb:hover` | ✅                      | Hover color                    |
+
+| `::-webkit-scrollbar-button`      | ❌                      | Hidden by overlay scrollbars   |
+
+| `::-webkit-scrollbar-corner`      | ⚠️                     | Only if both scrollbars visible |
+
+| `::-webkit-resizer`               | ⚠️                     | Only if resizable element       |
+
+| `::-webkit-scrollbar-track-piece` | ❌                      | Deprecated (not supported)     |
+
+_________________________________________________________________________________________________________________________

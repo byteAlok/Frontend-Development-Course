@@ -1,0 +1,33 @@
+/* h1{
+    color:green;
+    background-color: blue;
+} */
+/* 
+#h{
+    font-size: 50px;
+} */
+
+
+.head{
+    color: brown;
+    background-color: blueviolet;
+    padding: 50px;
+    font-size: 20px;
+    /* margin-right: 100px; */
+    text-align: center;
+}
+
+p.center{
+    color:blueviolet;
+}
+p.center{
+    color:red !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+

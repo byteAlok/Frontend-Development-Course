@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-auto-flow: dense Example</title>
+    <style>
+        body {
+            display: flex;
+            gap: 40px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-auto-rows: 100px;
+            gap: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            background: #f8f8f8;
+        }
+
+        .grid div {
+            background: lightcoral;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* make 2nd and 5th items span multiple cells to create gaps */
+        .grid div:nth-child(2) {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: orange;
+        }
+
+        .grid div:nth-child(5) {
+            grid-column: span 2;
+            background: teal;
+        }
+
+        /* --- Left Grid (Normal Flow) --- */
+        .normal {
+            grid-auto-flow: row;
+        }
+
+        /* --- Right Grid (Dense Flow) --- */
+        .dense {
+            grid-auto-flow: row dense;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Without Dense</h2>
+        <div class="grid normal">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+
+    <div>
+        <h2>With Dense</h2>
+        <div class="grid dense">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+    </div>
+</body>
+
+</html>

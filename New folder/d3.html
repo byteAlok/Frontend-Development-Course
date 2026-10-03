@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --myColor :red ;
+            --hsdkjcbsd : 50px;
+            --hh : 100px;
+        }
+        .d1{
+            --myBgCasdaolor :#ff5;
+            background-color: var(--myBgCasdaolor);
+        }
+
+        h1, h2, h3{
+            /*color: #173590;*/
+            background-color: var(--myBgCasdaolor, rgb(29, 251, 29) );
+            color: var(--myColor);
+            /*color: aqua;*/
+
+            font-size: var(--hsdkjcbsd);
+            height: var(--hh);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <h1>fallback Example</h1>
+    </div>
+    <div>
+        <h1>hello css</h1>
+        <h2>hello css 2</h2>
+        <h3>hello css 3</h3>
+    </div>
+</body>
+</html>

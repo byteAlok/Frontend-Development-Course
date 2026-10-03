@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="box">
+        <h3>Heading tag</h3>
+        Welcome
+        <p style="display: none;">Hello paragraph</p>
+
+        <p>New p tag </p>
+        <b>Bold</b>
+    </div>
+    <div id="out"> </div>
+
+    <script>
+        var a = document.getElementById("box").children;
+        console.log(a[1].innerText)
+        console.log(a[3].innerHTML)
+        console.log(a.length)
+
+        var out = document.getElementById('out')
+        
+        for(var i of a)
+        {
+            console.log(i.textContent)
+            out.textContent = out.textContent + i.textContent
+        }
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 class="hh text" id="h">nsertRule() for css through JS</h2>
+    <p>This p tag</p>
+    <button onclick="darkMode()">Change Mode</button>
+
+
+
+    <script>
+
+        var styleTag = document.createElement("style");
+
+        styleTag.textContent = `
+            .dark {
+                background-color : black;
+                color : white;
+            }
+            .heading {
+                background-color : red;
+                color : yellow;
+                padding : 5px 10px;
+            }
+        `;
+        document.head.append(styleTag);
+
+        document.getElementById("h").classList.add("heading");
+        document.getElementById("h").classList.remove('text');
+
+        // document.body.classList.add("dark")
+
+        function darkMode() {
+            if (!document.documentElement.classList.contains("dark")) {
+                document.documentElement.classList.toggle("dark");
+            }
+            else {
+                document.documentElement.classList.toggle("dark");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="box">
+        <h3>Heading tag</h3>
+        Welcome
+        <p style="display: none;">Hello paragraph</p>
+
+        <p>New p tag </p>
+    </div>
+    <input type="text" value="40" id="ip">
+
+    <script>
+        var a = document.getElementById("box")
+        console.log(a.innerHTML);
+        console.log(a.innerText);
+        console.log(a.textContent);
+
+        var b = document.getElementById("ip")
+        console.log(b.value);
+
+    </script>
+</body>
+</html>

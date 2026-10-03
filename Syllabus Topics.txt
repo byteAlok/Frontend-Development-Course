@@ -1,0 +1,51 @@
+--------------------------------------------------
+orientation : portrait/landscape
+dpi, pt, cm, in
+Modern => ch, ex
+Grid 
+Named grid
+Nested grid
+
+--------------------------------------------------
+
+Transition
+Animations
+Transform
+2D & 3D
+
+--------------------------------------------------
+
+Clip-path
+CSS Shapes (Circle text-wraping)
+@media print, @media screen, @media speech
+Page 
+Page-breaks(page-break-before/after)
+
+---------------------------------------------------
+
+custom-scrollbars
+scroll-bahviour /* auto, smooth */
+CSS Counters => counter-reset, counter-increment, content
+
+---------------------------------------------------
+
+::Pseudo Elements
+:Pseudo Class
+Attribute Selectors
+:first-child, :last-child, :only-child
+:nth-of-type()
+:not()
+::marker
+list-style
+UI states => :enabled, :disabled, :checked, :required, :invalid
+Target => :target , :empty
+
+------------------------------------------------------
+
+
+
+
+
+
+
+

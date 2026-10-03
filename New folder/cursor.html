@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+   
+        /* CURSOR DEMO SECTION */
+        .cursor-demo {
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+
+        .cursor-box {
+            width: 180px;
+            height: 90px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            user-select: none;
+            font-weight: bold;
+            text-transform: lowercase;
+        }
+
+        /* BASIC */
+        .auto {
+            cursor: auto;
+            background: #f1f1f1;
+        }
+
+        .default {
+            cursor: default;
+            background: #e6ffe6;
+        }
+
+        .none {
+            cursor: none;
+            background: #ffcccc;
+        }
+
+        /* LINK & ACTION */
+        .pointer {
+            cursor: pointer;
+            background: #d1f7c4;
+        }
+
+        .help {
+            cursor: help;
+            background: #f4cccc;
+        }
+
+        .progress {
+            cursor: progress;
+            background: #ead1dc;
+        }
+
+        .wait {
+            cursor: wait;
+            background: #ffe5b4;
+        }
+
+        /* TEXT */
+        .text {
+            cursor: text;
+            background: #e8eaf6;
+        }
+
+        .vertical-text {
+            cursor: vertical-text;
+            background: #cfe2ff;
+        }
+
+        /* MOVE / RESIZE */
+        .move {
+            cursor: move;
+            background: #cce5ff;
+        }
+
+        .n-resize {
+            cursor: n-resize;
+            background: #fff2cc;
+        }
+
+        .e-resize {
+            cursor: e-resize;
+            background: #fff2cc;
+        }
+
+        .w-resize {
+            cursor: w-resize;
+            background: #fff2cc;
+        }
+
+        .ne-resize {
+            cursor: ne-resize;
+            background: #fff2cc;
+        }
+
+        .nw-resize {
+            cursor: nw-resize;
+            background: #fff2cc;
+        }
+
+        .se-resize {
+            cursor: se-resize;
+            background: #fff2cc;
+        }
+
+        .sw-resize {
+            cursor: sw-resize;
+            background: #fff2cc;
+        }
+
+        /* DRAG & DROP */
+        .grab {
+            cursor: grab;
+            background: #fce5cd;
+        }
+
+        .grabbing {
+            cursor: grabbing;
+            background: #c9daf8;
+        }
+
+        .copy {
+            cursor: copy;
+            background: #d0e0e3;
+        }
+
+        .alias {
+            cursor: alias;
+            background: #fff2cc;
+        }
+
+        .no-drop {
+            cursor: no-drop;
+            background: #f7c6c7;
+        }
+
+        .not-allowed {
+            cursor: not-allowed;
+            background: #f7c6c7;
+        }
+
+        /* PRECISION & ZOOM */
+        .crosshair {
+            cursor: crosshair;
+            background: #fcd5ce;
+        }
+
+        .zoom-in {
+            cursor: zoom-in;
+            background: #d9ead3;
+        }
+
+        .zoom-out {
+            cursor: zoom-out;
+            background: #d9d2e9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CURSOR DEMO -->
+    <h1>Cursor Property Examples</h1>
+    <hr><hr>
+    
+    <h2>Basic</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box auto">auto</div>
+        <div class="cursor-box default">default</div>
+        <div class="cursor-box none">none</div>
+    </div>
+    <hr>
+    
+    <h2>Link & Action</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box pointer">pointer</div>
+        <div class="cursor-box help">help</div>
+        <div class="cursor-box progress">progress</div>
+        <div class="cursor-box wait">wait</div>
+    </div>
+    <hr>
+
+    <h2>Text</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box text">text</div>
+        <div class="cursor-box vertical-text">vertical-text</div>
+    </div>
+<hr>
+    <h2>Move / Resize</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box move">move</div>
+        <div class="cursor-box n-resize">n-resize</div>
+        <div class="cursor-box e-resize">e-resize</div>
+        <div class="cursor-box w-resize">w-resize</div>
+        <div class="cursor-box ne-resize">ne-resize</div>
+        <div class="cursor-box nw-resize">nw-resize</div>
+        <div class="cursor-box se-resize">se-resize</div>
+        <div class="cursor-box sw-resize">sw-resize</div>
+    </div>
+<hr>
+    <h2>Drag & Drop</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box grab">grab</div>
+        <div class="cursor-box grabbing">grabbing</div>
+        <div class="cursor-box copy">copy</div>
+        <div class="cursor-box alias">alias</div>
+        <div class="cursor-box no-drop">no-drop</div>
+        <div class="cursor-box not-allowed">not-allowed</div>
+    </div>
+<hr>
+    <h2>Precision & Zoom</h2>
+    <div class="cursor-demo">
+        <div class="cursor-box crosshair">crosshair</div>
+        <div class="cursor-box zoom-in">zoom-in</div>
+        <div class="cursor-box zoom-out">zoom-out</div>
+    </div>
+
+</body>
+
+</html>

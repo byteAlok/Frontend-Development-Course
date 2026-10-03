@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units Full Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid;
+        }
+
+        h1,
+        h2 {
+            color: #0059b3;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            background: #007bff;
+
+            color: white;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .abs .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .abs .box span {
+            font-size: 14px;
+            display: block;
+        }
+
+        /*  --------------------- Absolute Units ------------------ */
+        .px {
+            width: 96px; /* Pixels */
+            height: 96px;
+        }
+
+        .in {
+            width: 1in; /* Inches => 1in = 96px */
+            height: 1in;
+        }
+
+        .cm {
+            width: 1cm; /* Centimeters => 1cm ≈ 37.8px */
+            height: 1cm;
+        }
+
+        .mm {
+            width: 10mm; /* Millimeters => 1mm ≈ 3.78px */
+            height: 10mm;
+        }
+
+        .pt {
+            width: 72pt; /* Points => 1pt ≈ 1.33px */
+            height: 72pt;
+        }
+
+        .pc {
+            width: 6pc; /* Picas=> 1pc ≈ 16px */
+            height: 6pc;
+        }
+
+        /*  ------------------------------Relative Units --------------------------*/
+        .em {
+            width: 10em; /* Em unit => 1em = parent font-size*/
+            height: 3em; 
+        }
+
+        .rem {
+            width: 10rem; /* Root em => 1rem = root(html) font-size */
+            height: 3rem;
+        }
+
+        .ex {
+            width: 20ex; /* ex = x-height => Height of lowercase “x” => ~0.5em ≈ 8px (approx) */
+            height: 5ex;
+        }
+
+        .ch {
+            width: 20ch; /*Character width => ch = Width of “0” character => ~0.5–1em ≈ 8–16px */
+            height: 5ch;
+        }
+
+        /* -------------------------------------Viewport Units ------------------------------*/
+        .vw {
+            width: 10vw; /* vw = Viewport width => 1% of viewport width => 1vw = 1% of width */
+            height: 5vh;
+        }
+
+        .vh {
+            width: 10vh;  /* vh = Viewport height => 1% of viewport height => 1vw = 1% of height */
+            height: 10vh;
+        }
+
+        .vmin {
+            width: 10vmin; /* vmin = Viewport min => 1% of smaller side => Depends on viewport */
+            height: 10vmin;
+        }
+
+        .vmax {
+            width: 10vmax; /* vmax = Viewport max => 1% of larger side => Depends on viewport */
+            height: 10vmax;
+        }
+
+        /* ------------------------------- Modern Units Example ------------------*/
+        .modern p {
+            border: 1px solid;
+            line-height: 3lh; /* lh = Line height unit => Relative to element’s line-height => e.g. 1lh ≈ 16–20px */
+            margin-bottom: 4rlh; /* rlh = Root line height => Based on root element’s line-height => ~root line-height in px */
+        }
+
+        /* -----------------------Resolution / Display Density ------------------------*/ 
+
+            /* dpi = Dots per inch => Pixel density of display => 1in = 96dpi = 96px */
+            /* dppx = Dots per pixel => 1dppx = 96dpi => 2dppx = 192dpi (HiDPI / Retina) */
+
+
+            /* dppx             	Equivalent DPI              	Meaning 
+            ----------------------------------------------------------------------------------------------
+
+                1dppx       ---->      96dpi        ---->           Standard screen
+                1.5dppx     ---->      144dpi       ---->           Mid-density screen
+                2dppx       ---->      192dpi       ---->           Retina / HiDPI screen
+                3dppx       ---->      288dpi       ---->           Ultra-high DPI (modern phones) 
+
+            --------------------------------------------------------------------------------------------- */
+
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 100vw; background-color:red;"> example % and vw</div>
+    <h1>🎨 CSS Units Full Demonstration</h1>
+
+    <!-- Absolute Units -->
+    <section class="abs">
+        <h2>Absolute Units (Fixed Physical Size)</h2>
+        <div class="box px"><span>1px</span></div>
+        <div class="box in"><span>1in (96px)</span></div>
+        <div class="box cm"><span>1cm (≈37.8px)</span></div>
+        <div class="box mm"><span>10mm (≈37.8px)</span></div>
+        <div class="box pt"><span>72pt (1in)</span></div>
+        <div class="box pc"><span>6pc (1in)</span></div>
+    </section>
+
+    <!-- Relative Units -->
+    <section>
+        <h2>Relative Units (Based on Font Size)</h2>
+        <div class="box em"><span>10em</span></div>
+        <div class="box rem"><span>10rem</span></div>
+        <div class="box ex"><span>20ex (x-height)</span></div>
+        <div class="box ch"><span>20ch (0 width)</span></div>
+    </section>
+
+    <!-- Viewport Units -->
+    <section>
+        <h2>Viewport Units (Responsive)</h2>
+        <div class="box vw"><span>10vw</span></div>
+        <div class="box vh"><span>10vh</span></div>
+        <div class="box vmin"><span>10vmin</span></div>
+        <div class="box vmax"><span>10vmax</span></div>
+    </section>
+
+
+    <!-- Modern CSS Units -->
+    <section class="modern">
+        <h2>Modern CSS Units (ch, ex, lh, rlh, cap, ic)</h2>
+        <p>1ch = width of character “0” → This input box is 20ch wide:</p>
+        <input type="text" style="width:20ch; padding:5px;" placeholder="Type here..." />
+        <p style="font-size:16px;">1ex = height of “x” → 2ex line-height example below:</p>
+        <div style="background:#ffc107; padding:5px; line-height:10ex;">
+            Text with line-height = 2ex
+        </div>
+        <p style="line-height:5.5lh;">This paragraph uses <strong>lh</strong> (line height unit).</p>
+        <p style="line-height:6.8rlh;">This one uses <strong>rlh</strong> (root line height).</p>
+    </section>
+
+    <!-- Media Query Example -->
+    <section>
+        <h2>Media Feature Example (Orientation, DPI)</h2>
+        <p>Resize window or rotate screen to see orientation-based styling.</p>
+    </section>
+
+    <style>
+        @media (orientation: portrait) {
+            body {
+                background: #00dc00;
+            }
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background: #f9ff82;
+            }
+        }
+
+    </style>
+
+</body>
+
+</html>

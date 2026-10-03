@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <h1>HTML DOM : createElement</h1>
+    <ul id="ul">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+
+    <p class="pp">Hello Dosto</p>
+    <p id="p2">This is DOM topic</p>
+    <h2 class="pp">This is H2 Tag</h2>
+
+    <hr><br>
+
+    <script>
+        var el = document.createElement("div");
+
+        var ul = document.getElementById("ul");
+
+        var p2 = document.getElementById("p2");
+        p2.style.backgroundColor = "pink";
+
+        el.id = "js-box";
+        el.className = "w-48 h-48 border-2 bg-teal-700";
+        el.textContent = "New DIV BOX";
+
+        /* el.style.color = "red";
+        el.style.backgroundColor = "yellow";
+        el.style.border = "3px solid blue";
+        */
+
+        el.style.cssText = ` font-weight : bold;
+        background-color: purple;
+        color : white;
+        border : 4px solid green;
+        padding : 10px; `
+     
+        
+        // ul.before(el);
+        // ul.after(el);
+
+        // ul.append(el);
+        // ul.prepend(el);
+
+        ul.replaceWith(el)
+        // document.body.replaceWith(el)
+        
+    /*    var p = document.getElementsByTagName("p");
+        var classTag = document.getElementsByClassName("pp");
+
+        // p[1].innerHTML = "Hi"
+        classTag[0].innerHTML = "Hi"
+    */
+
+    </script>
+
+</body>
+</html>

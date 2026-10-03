@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="h2_text">Hello</h2>
+    <h2 id="h3_text">Sir</h2>
+    <h2 id="h4_text">JI</h2>
+
+    <button onclick="SayHi()">Click Me</button>
+    <button onclick="alert('Hi')">Alert</button>
+    <br>
+    <hr>
+    <br>
+
+    <input type="text" placeholder="Enter first number" id="inp1">
+    <br><br>
+    <input type="text" placeholder="Enter second number" id="inp2">
+    <br><br>
+    <input type="text" id="output">
+
+    <button onclick="calculate(this.value)" value="+"> + </button>
+    <button onclick="calculate('-')" value="-"> - </button>
+    <button onclick="calculate('*')"> x </button>
+    <button onclick="calculate('/')"> / </button>
+    <button onclick="calculate('s')"> SQUARE  </button>
+
+    <script>
+
+        function calculate(a) {
+            var n1 = parseFloat(document.getElementById('inp1').value);
+            var n2 = parseFloat(document.getElementById('inp2').value);
+
+            var out = document.getElementById('output');
+
+            if (a == '+') {
+                out.value = n1 + n2;
+            }
+            else if (a == '-') {
+                out.value = n1 - n2;
+            }
+            else if (a == '*') {
+                out.value = n1 * n2;
+            }
+            else if (a == '/') {
+                if (n1 == 0 || n2 == 0) {
+                    out.value = "Divisible error";
+                }
+                else {
+                    out.value = n1 / n2;
+                }
+            }
+            else if ( a == 's' ){
+                out.value = n1 * n1
+            }
+            // console.log(a)
+        }
+        function SayHi() {
+
+            // var heading = document.getElementById("h2_text");
+            // heading.innerHTML = "Welcome";
+
+            var a1 = document.getElementById('h2_text').innerHTML = "Good Morning";
+            var a2 = document.getElementById('h3_text').innerText = "Good Night";
+            var a3 = document.getElementById('h4_text').textContent = "Good Afternoon";
+
+            console.log(a1)
+            console.log(a2)
+            console.log(a3)
+        }
+    </script>
+
+</body>
+
+</html>

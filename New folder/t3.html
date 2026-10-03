@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="/image/programming-background.jpg" />
+    <style>
+        .d {
+            width: 50vw;
+            height: 50vw;
+            border: 1px solid;
+            overflow-x: auto;
+        }
+
+        p {
+            width: 50vw;
+            height: 50vw;
+            border: 1px solid;
+            overflow: auto;
+            /* white-space: nowrap;*/
+            text-overflow: ellipsis;
+            /* visibility: hidden;
+            display: none;*/
+
+        }
+
+        #h1 {
+            background-color: aqua;
+            float: left;
+
+        }
+
+        #h2 {
+            background-color: aqua;
+            float: right;
+
+        }
+
+        /* Scrollbar ka outer part */
+        .scroll-box::-webkit-scrollbar {
+            width: 15px;
+            /* Scrollbar ki motai */
+        }
+
+        /* Scrollbar track (background part) */
+        .scroll-box::-webkit-scrollbar-track {
+            background: #2aff6d;
+            /* light gray */
+            border-radius: 10px;
+        }
+
+        /* Scrollbar thumb (jo move hota hai) */
+        .scroll-box::-webkit-scrollbar-thumb {
+            background: #ef5337;
+            /* Tailwind blue-500 */
+            border-radius: 22px;
+        }
+
+        /* Jab thumb pe hover ho */
+        .scroll-box::-webkit-scrollbar-thumb:hover {
+            background: #c702a3;
+            /* darker blue */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="d"> -->
+    <p class="scroll-box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In suscipit voluptas amet consequatur porro! Nobis et
+        in repellendus repudiandae labore eligendi corporis ea odit aspernatur, facilis atque perferendis ratione
+        solutathereare eveniet inventore illo dolore eos? A quaerat sequi distinctio aut saepe esse magnam ut eligendi
+        quasi doloremque hic nulla rerum mollitia quisquam, reiciendis ad quibusdam nihil ipsum! Ratione itaque
+        molestias adipisci at officia incidunt, nam culpa. Est fugit commodi nostrum incidunt a laborum officiis
+        laboriosam adipisci, earum expedita maxime. Corporis, facere omnis reprehenderit nesciunt deleniti unde vero
+        tempora numquam veniam laudantium suscipit? Maxime est tenetur vitae totam facilis in, aut labore veniam
+        consequuntur facere explicabo dolorem itaque quaerat, at aspernatur illum possimus, adipisci magni. Ad sequi
+        deserunt adipisci, ratione accusantium impedit odio ipsum fuga quam laboriosam reiciendis mollitia sed enim
+        repellendus illum pariatur! Atque eligendi officiis perferendis expedita suscipit. Fuga, deleniti numquam dicta
+        minus, omnis ratione aut, eius officia fugiat nostrum eligendi? Repudiandae perferendis cumque labore dolor.
+        Dolorum dignissimos eaque sapiente est blanditiis voluptate, tenetur dolores dolor nam cumque rem nulla magnam
+        omnis atque assumenda? Nulla ab rem id, unde quis officia totam accusantium quia iusto sapiente impedit nihil
+        tenetur quidem provident at animi obcaecati suscipit rerum repellendus voluptas natus atque, labore deleniti.
+        Corrupti sint soluta nihil excepturi ipsam dolore sapiente ea odio, doloribus eum maxime eius voluptate
+        architecto necessitatibus officiis eveniet deleniti ducimus perferendis aut, quos enim nam eaque cupiditate
+        laudantium. Ipsum explicabo quia, assumenda neque quae similique quibusdam a est culpa eaque deserunt dolorum
+        facere facilis veniam odit!
+    </p>
+    <!-- </div> -->
+    <h1 id="h1">Hello</h1>
+    <h1 id="h2">World</h1>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit & Object-position Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f7f7f7;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* Image boxes */
+        .box {
+            width: 800px;
+            height: 500px;
+            border: 3px solid #333;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+        /* Common image style */
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Captions below boxes */
+        .caption {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* 🎯 Different object-fit examples */
+        .cover img {
+            object-fit: cover;
+        }
+
+        .contain img {
+            object-fit: contain;
+        }
+
+        .fill img {
+            object-fit: fill;
+        }
+
+        .none img {
+            object-fit: none;
+        }
+
+        .positioned img {
+            object-fit: cover;
+            object-position: right bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🎯 Object-fit & Object-position Examples</h2>
+
+    <div class="container">
+
+        <div>
+            <div class="box cover">
+                <img src="image/college girl.jpg" alt="College girl">
+            </div>
+            <div class="caption">object-fit: cover</div>
+        </div>
+
+        <div>
+            <div class="box contain">
+                <img src="image/college girl.jpg" alt="College girl">
+            </div>
+            <div class="caption">object-fit: contain</div>
+        </div>
+
+        <div>
+            <div class="box fill">
+                <img src="image/college girl.jpg" alt="College girl">
+            </div>
+            <div class="caption">object-fit: fill</div>
+        </div>
+
+        <div>
+            <div class="box none">
+                <img src="image/college girl.jpg" alt="College girl">
+            </div>
+            <div class="caption">object-fit: none</div>
+        </div>
+
+        <div>
+            <div class="box positioned">
+                <img src="image/college girl.jpg" alt="College girl">
+            </div>
+            <div class="caption">object-fit: cover; object-position: right bottom</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

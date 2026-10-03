@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will-change Example</title>
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: #e2e2e2;
+    gap:100px;
+}
+
+.box {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background: #ff5252;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: #00ff15;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+/* Hover effect */
+.box:hover , .box2:hover {
+    transform: scale(1.5) rotate(20deg);
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box2"></div>
+
+<img src="image/Screenshot 2025-11-03 235731.png" width="700px"/>
+</body>
+</html>

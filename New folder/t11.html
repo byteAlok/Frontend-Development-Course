@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+     /*  @media (prefers-color-scheme: dark) 
+        {
+           :root{
+                --bg-color : rgb(0, 0, 0);
+                --text-color: rgb(255, 255, 255);
+            } 
+        }*/
+   /*     @media (prefers-color-scheme: light) 
+        {
+           :root{
+                --bg-color : rgb(255, 255, 255);
+                --text-color: rgb(0, 0, 0);
+            } 
+        }*/
+
+        body{
+            background-color: var(--bg-color, rgb(115, 255, 111) );
+            color: var(--text-color, black);
+        }
+
+     
+  
+    /*    :root
+        {
+            --bg-color : rgb(184, 247, 175);
+            --text-color: rgb(0, 0, 0);
+        } 
+
+        [data-thee = "dark"]
+        {
+            --bg-color : rgb(0, 0, 0);
+            --text-color: rgb(255, 255, 255);
+        } */
+
+        img{
+            mix-blend-mode: multiply; 
+            
+            /*normal multiply, screen, overlay, darken, lighten, difference,
+            exclusion, color-dodge, color-burn, hard-light, soft-light,
+            hue, saturation, color, luminosity */
+
+            /*filter: blur(0px) brightness(80%) contrast(50%) grayscale(20%)
+            sepia(30%) invert(5%) saturate(200%) hue-rotate(45deg) 
+            drop-shadow(20px 25px 5px blue); /* none */           
+        }
+
+        p{
+           /*column-count: 3;*/
+            column-width: 300px;
+           column-gap: 20px;
+            column-rule: 2px dashed red ;
+
+           /* columns: 400px; /* this shorthand property take one value at a time */
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Dark and Light Mode Example</h1>
+    <button id="btn">Toggle</button>
+    <br>
+    <br>
+    <br>
+
+
+    <img src="image/web-development-concept.jpg" width="550"/>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, pariatur suscipit non minus possimus nobis quos consectetur impedit ex officiis ipsa corrupti esse tenetur nesciunt numquam quibusdam ad blanditiis in ipsum explicabo eaque dolorum debitis incidunt. Ratione rem aut repellendus! Sed, veritatis non alias sunt nostrum nesciunt cumque facere quod rem est qui unde at earum aut quo molestias soluta quae nam eum ex. Adipisci eligendi non ipsam maiores illum praesentium eum consequuntur dolor ipsa nesciunt distinctio debitis velit quas soluta quae repellendus quos, necessitatibus laudantium odit sunt facere, possimus deserunt doloremque fugit. Sunt adipisci nobis numquam ratione iure cupiditate molestias quis mollitia dolores, vitae provident ullam aut soluta deserunt? Provident vel eaque labore dolor natus voluptatibus fugit ad deleniti cumque minima reprehenderit fuga doloremque, ipsum fugiat nesciunt optio soluta nisi beatae sed sequi! Qui neque, ad culpa tenetur nostrum perferendis odio nesciunt repellat placeat suscipit rem error minima cumque libero voluptates dolorem cum veniam necessitatibus asperiores praesentium! Aliquid tempora, in incidunt consequatur magnam quo! Consequatur aut cum in illo, officiis nobis tempora odio nemo ad adipisci dolorum consectetur, reiciendis aliquam sit facilis blanditiis hic ratione eligendi quos dolor voluptas maxime, asperiores animi! Sequi delectus ut velit perferendis culpa illo sit odio, quibusdam quas voluptatem, pariatur repellat id maxime ullam tempora, a eum? Maxime autem cum nesciunt voluptatem impedit cumque sapiente ipsa nihil aut vero totam culpa optio delectus nobis eaque, eum ipsam est veniam doloribus sed iusto. Iusto quisquam, nobis repellat quo aliquam non placeat debitis consequuntur et, dolorem animi quae dolorum culpa deserunt officia sapiente earum ipsa nesciunt dignissimos, optio sed excepturi quidem? Nesciunt qui rerum illum voluptatem deleniti dolor blanditiis minima! Temporibus velit veritatis placeat vero nemo distinctio culpa modi, dolores iusto ab tenetur, facilis qui? Ad numquam facere ipsum? Deleniti deserunt harum ipsam reprehenderit quasi veritatis rem, cumque vitae quas quisquam fuga, expedita perferendis. Impedit nostrum delectus beatae eum obcaecati. Illo recusandae ipsa quis vitae aspernatur cum, deleniti labore repudiandae a error ex sapiente deserunt? Labore itaque qui, illum perferendis quisquam expedita quae consequuntur repellendus quia, nisi neque, doloremque facilis incidunt voluptatem enim reprehenderit ipsa dolor asperiores dolores at veritatis possimus? Libero amet incidunt perspiciatis aspernatur veniam, ducimus a minus modi accusantium adipisci quos optio nihil harum iusto qui recusandae nesciunt fugit quia, reiciendis illo temporibus quasi consequuntur? Excepturi, incidunt sapiente. Accusamus vero ipsum consectetur dolores, eos, rem reprehenderit voluptas iusto ut, sunt tenetur! Necessitatibus, neque.
+    </p>
+    
+
+    <!-- <script>
+        const body = document.body;
+        document.getElementById("btn").onclick = ()=> {
+            body.dataset.thee = body.dataset.thee === "dark" ? "light" : "dark"
+        }
+    </script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode</title>
+    <style>
+        /* Default variables */
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
+
+        /* System-based preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: black;
+                --text-color: white;
+            }
+        }
+
+        /* Manual dark mode */
+        [data-theme="dark"] {
+            --bg-color: black;
+            --text-color: white;
+        }
+
+        /* Manual light mode */
+        [data-theme="light"] {
+            --bg-color: yellow;
+            --text-color: black;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dark and Light Mode Example</h1>
+    <button id="btn">Toggle</button>
+
+    <script>
+        const body = document.body;
+
+        // 1️⃣ Check localStorage preference
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            body.dataset.theme = savedTheme;
+        } else {
+            // 2️⃣ Set theme according to system preference initially
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            body.dataset.theme = prefersDark ? 'dark' : 'light';
+        }
+
+        // 3️⃣ Toggle functionality
+        document.getElementById('btn').onclick = () => {
+            const newTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+            body.dataset.theme = newTheme;
+            localStorage.setItem('theme', newTheme);
+        };
+    </script>
+</body>
+</html>
+-->

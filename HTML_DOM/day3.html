@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="box"> 
+        <p>Child 1</p>
+        div Text 
+        <span>Child 2</span>
+        <h2>Child 4</h2>
+        <!--  -->
+        .....
+        <p>Child 3</p>
+    </div>
+<hr>
+    <div id="out">sfnsf</div>
+
+    <script>
+        var box = document.getElementById("box").children;
+        var box2 = document.getElementById("box").childNodes;
+        var output = document.getElementById("out");
+
+        // console.log(box);
+        // console.log(box2);
+        // console.log(typeof(567) == 'number');
+
+       /* console.log(box2[0]);
+        console.log(box2[0].nodeType);
+        console.log(box2[0].nodeName);
+        console.log(box2[0].textContent);
+
+        console.log(box2[1]);
+        console.log(box2[1].nodeType);
+        console.log(box2[1].nodeName);
+        console.log(box2[1].textContent);
+        
+        console.log(box2[3]);
+        console.log(box2[3].nodeType);
+        console.log(box2[3].nodeName);
+        console.log(box2[3].textContent);
+        
+        console.log(box2[6]);
+        console.log(box2[6].nodeType);
+        console.log(box2[6].nodeName);
+        console.log(box2[6].textContent);
+        */
+
+        var temp = ""
+
+        for(var i = 0; i < box2.length; i++)
+        {
+            temp = temp + box2[i].textContent + '<br>';            
+
+            console.log(box2[i].textContent + "<br>");
+            // console.log(box2[i].textContent);
+        }       
+        // out.innerText = temp;
+        out.innerHTML = temp; 
+        // out.textContent = temp;
+ 
+    </script>
+
+</body>
+</html>

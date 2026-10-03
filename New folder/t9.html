@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS var, min, max, clamp Example</title>
+  <style>
+    /* 🌿 Custom Variables */
+    :root {
+      --main-color: tomato;
+      --secondary-color: rgb(43, 55, 185);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f5f5f5;
+      color: #222;
+      border: 1px solid;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+
+    /* 🔹 1. var() Example */
+    .var-example {
+      background-color: var(--main-color);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* 🔹 2. min() Example — chooses the smaller of two values */
+    .min-example {
+      background: lightcoral;
+      width: min(50vw, 500px); /* whichever is smaller */
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* 🔹 3. max() Example — chooses the larger of two values */
+    .max-example {
+      background: lightseagreen;
+      width: max(200px, 60vw); /* whichever is larger */
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* 🔹 4. clamp() Example — keeps value within a range */
+    .clamp-example {
+      background: slateblue;
+      font-size: clamp(1rem, 3rem, 4rem); /* min, preferred, max */
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* For spacing */
+    div {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS <code>var()</code>, <code>min()</code>, <code>max()</code>, <code>clamp()</code> Demo</h1>
+
+  <div class=" var-example">
+    <h2>1️⃣ var() Example</h2>
+    <p>Background uses <code>var(--main-color)</code> = tomato</p>
+  </div>
+
+  <div class=" min-example">
+    <h2>2️⃣ min() Example</h2>
+    <p>Width = <code>min(50vw, 500px)</code> → takes smaller value.</p>
+  </div>
+
+  <div class=" max-example">
+    <h2>3️⃣ max() Example</h2>
+    <p>Width = <code>max(200px, 60vw)</code> → takes larger value.</p>
+  </div>
+
+  <div class=" clamp-example">
+    <h2>4️⃣ clamp() Example</h2>
+    <p>Font size = <code>clamp(1rem, 2rem, 3rem)</code></p>
+    Resize the window to see font-size adjust responsively.
+  </div>
+
+</body>
+</html>

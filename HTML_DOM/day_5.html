@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="ul-list">
+        <li id="list1">list 1</li>
+        <li id="list2">list 2</li>
+        <li id="list3">list 3</li>
+        <li id="list4">list 4</li>
+        <li id="list5">list 5</li>
+    </ul>
+
+    <button id="r-btn">removeChild</button>
+    <script>
+
+        // parentElement.removeChild(childElement)
+
+        var ul = document.getElementById('ul-list');
+        var list3 = document.getElementById('list3');
+
+        document.getElementById('r-btn').addEventListener('click', () => {
+            ul.removeChild(list3);
+        })
+
+    </script>
+
+    <h1 id="h1"> This is Heading </h1>
+    <p id="p1"> This is p tag </p>
+
+    <!-- <button onclick="rem(event)">Remove</button> -->
+    <button id="btn" class="text-white bg-gray-500 " value="hhb">Click <span>Me</span></button>
+
+    <script>
+        
+
+        var h1 = document.getElementById('h1');
+        var btn = document.getElementById('btn');
+    
+    
+        btn.addEventListener( "click", function rem (e) {
+            console.log(e.target.value)
+            console.log(e.target.textContent)
+            console.log(e.target.innerHTML)
+            console.log(e.target.innerText)
+            console.log(e.target.outerHTML)
+            console.log(e.target.id)
+            console.log(e.target.className)
+
+            //h1.remove();
+            h1.textContent = "";
+        })
+    
+    /*
+        function rem(a){
+            console.log(a.target.value)
+            console.log(a.target.textContent)
+            h1.remove();
+        }
+    */
+
+    </script>
+</body>
+</html>

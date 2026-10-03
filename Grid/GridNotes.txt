@@ -1,0 +1,169 @@
+✅ 4. Summary Table: Grid Progress
+
+| Level              | Concepts                                                      | Status       |
+| ------------------ | ------------------------------------------------------------- | ------------ |
+| 🧱 Basic           | display, template-columns/rows, gap                           | ✅ Done      |
+| 🎯 Intermediate    | justify/align content & items, grid-area                      | ✅ Done      |
+| 🚀 Advanced        | minmax(), auto-fit/fill, grid-auto-flow, subgrid, place-items | ⏳ Remaining |
+| 🧠 Expert Practice | Responsive grids, nested grids, layout templates              | ⏳ Remaining |
+
+--------------------------------------------------------------------------------------------------------
+
+🔹 (c) minmax() Function------------
+Track ke liye minimum aur maximum size set karta hai.
+
+grid-template-columns: repeat(3, minmax(150px, 1fr));
+
+👉 Column kam se kam 150px hoga, aur agar space milti hai to 1fr tak expand karega.
+
+------------------------------------------------------------------------------------------------------------
+
+🔹 (d) auto-fit & auto-fill --------
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+🔸 auto-fill → space bachti hai to blank columns bhi banata hai.
+🔸 auto-fit → space bachti hai to columns stretch kar deta hai.
+
+Perfect for responsive card grids 🧱
+
+----------------------------------------------------------------------
+
+place-content: <align-content> <justify-content>;
+place-items: <align-items> <justify-items>;
+place-self: <align-self> <justify-self>;
+
+----------------------------------------------------------------------
+
+
+grid-row-start: 1;
+grid-column-start: 1;
+grid-row-end: 3;
+grid-column-end: 3;
+            
+grid-area: 1 / 1 / 3 / 3;
+
+grid-area: <row-start> / <column-start> / <row-end> / <column-end>;
+
+----------------------------------------------------------------------
+✅ Example => grid-auto-rows
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 150px;       /* sirf 2 columns */
+  grid-auto-rows: 200px;                    /* extra rows ka height */
+}
+
+📌 Agar items 2 se zyada hain, to next row automatically banegi aur uska height 200px hoga.
+
+---------------------------------------------------------------------
+
+✅ Example 2 (with minmax) ---------
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(100px, auto);
+}
+
+📌 Agar koi extra column ban jata hai (due to overflow),
+to uska width minimum 100px aur maximum auto (content ke hisaab se) hoga.
+
+---------------------------------------------------------------------
+
+🔹 grid-auto-flow ----------
+
+✅ Modes:
+
+| Value           | Behavior                                               | Visualization               |
+| --------------- | ------------------------------------------------------ | ----------------------------|
+| `row` (default) | Items fill row-wise, left → right, then next row       | 📏 Horizontal fill          |
+----------------------------------------------------------------------------------------------------------
+| `column`        | Items fill column-wise, top → bottom, then next column | 📏 Vertical fill            |
+-----------------------------------------------------------------------------------------------------------
+| `dense`         | Browser tries to fill empty gaps left by bigger items  | 🧩 Tetris-like compact grid |
+
+-------------------------------------------------
+✅ Example: grid-auto-flow: row;
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-auto-flow: row; /* Default */
+}
+📌 Items fill left → right → next row.
+
+--------------------------------------------------
+
+✅ Example: grid-auto-flow: column;
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-auto-flow: column;
+}
+📌 Items fill top → bottom → next column.
+
+--------------------------------------------------
+
+✅ Example: grid-auto-flow: row dense;
+
+.container {
+  display: grid;
+  grid-auto-flow: row dense;
+}
+📌 Compact fill karta hai — agar koi chhoti cell empty hai,
+to agla chhota item us jagah fit kar diya jata hai (like puzzle).
+
+---------------------------------------------------------------------------------------
+
+🧾 Summary Table ----------
+
+| Property                 | Purpose                  | Example                                   | Meaning                               |
+| ------------------------ | ------------------------ | ----------------------------------------- | ------------------------------------- |
+| `grid-auto-rows`         | Auto-added rows height   | `grid-auto-rows: 200px;`                  | Har new row 200px high                |
+| `grid-auto-columns`      | Auto-added columns width | `grid-auto-columns: minmax(100px, auto);` | New columns flexible                  |
+| `grid-auto-flow: row`    | Default flow direction   |                                           | Fill left → right                     |
+| `grid-auto-flow: column` | Fill top → bottom        |                                           | Column-wise placement                 |
+| `grid-auto-flow: dense`  | Compact fill             |                                           | Fill leftover empty cells             |
+| `place-items: X Y`       | Align all grid items     | `place-items: center end;`                | Center vertically, right horizontally |
+| `place-self: X Y`        | Align single item        | `place-self: start end;`                  | Top-right item                        |
+| `place-content: X Y`     | Align total grid         | `place-content: center end;`              | Grid center-bottom                    |
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 Syntax -------------
+
+grid-auto-flow: <row | column> || dense;
+
+✅ Allowed Combinations (Total 4 valid cases) -----------------------------------------------------
+
+| Value             | Description                                                |
+| ----------------- | ---------------------------------------------------------- |
+| `row` *(default)* | Items row-wise place honge (left → right, top → bottom)    |
+| `column`          | Items column-wise place honge (top → bottom, left → right) |
+| `row dense`       | Row-wise placement + gap filling                           |
+| `column dense`    | Column-wise placement + gap filling                        |
+
+-----------------------------------------------------------------------------------------------------
+
+❌ Invalid / Not Allowed Values ------
+
+| Example            | Reason                                                         |
+| ------------------ | -------------------------------------------------------------- |
+| `dense row`        | ❌ Order matter karta hai → `dense` hamesha second me aata hai |
+| `row column`       | ❌ Sirf ek direction allowed hai                               |
+| `dense only`       | ❌ Direction (row/column) mandatory hoti hai                   |
+| `row dense column` | ❌ Ek se zyada keywords nahi ho sakte                          |
+
+-----------------------------------------------------------------------------------------------------
+
+🧩 Quick Summary Table -----------------------------------------------------------------------------
+
+| Syntax                          | Direction  | Dense Mode | Behavior                   |
+| ------------------------------- | ---------- | ---------- | -------------------------- |
+| `grid-auto-flow: row;`          | Horizontal | ❌ No       | Default row-wise flow     |
+| `grid-auto-flow: column;`       | Vertical   | ❌ No       | Column-wise flow          |
+| `grid-auto-flow: row dense;`    | Horizontal | ✅ Yes      | Row-wise + gap filling    |
+| `grid-auto-flow: column dense;` | Vertical   | ✅ Yes      | Column-wise + gap filling |
+
+-------------------------------------------------------------------------------------------------------

@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: baseline;
+        }
+
+        div {
+            border: 1px solid;
+        }
+
+        .box1 {
+            font-size: 40px;
+        }
+
+        .box2 {
+            font-size: 25px;
+        }
+
+        .items {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="items">3</div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content: baseline example</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;              /* Multiple lines allowed */
+      align-content: baseline;      /* Aligns multiple lines by their baselines */
+      height: 300px;                /* Give space to see alignment clearly */
+      border: 2px solid black;
+      gap: 10px;
+    }
+    .box {
+      border: 1px solid gray;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;        /* Align text inside each box by baseline */
+      font-size: 20px;
+    }
+    .box:nth-child(2) { font-size: 35px; }
+    .box:nth-child(4) { font-size: 50px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+    <div class="box">F</div>
+  </div>
+</body>
+</html>

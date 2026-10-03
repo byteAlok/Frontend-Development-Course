@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ol {
+  counter-reset: item; /* counter start from 0 */
+}
+
+li {
+  counter-increment: item; /* increment each time li appears */
+}
+
+li::before {
+  content: counter(item) ". "; /* show counter value */
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+</body>
+</html>

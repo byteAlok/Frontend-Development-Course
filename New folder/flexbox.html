@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 600px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: row; /*row-reverse, column, column-reverse*/
+            flex-wrap: nowrap; /*wrap, wrap-reverse */
+            /*justify-content: space-evenly; flex-start, flex-end, center, space-between, around, evenly*/
+            /*align-items: stretch; flex-start, flex-end, center,*/
+            /*align-content: space-around; flex-start, flex-end, center, space-between, around, evenly*/
+            /*gap:10px;*/
+            
+            /* flex : ; flex-grow, flex-shrink, flex-basis*/
+        }
+        .box{
+            
+            height: 150px;
+            border: 1px solid ;
+            font-size: 32px;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="order:0;">1</div>
+    <div class="box" style="order:0;" >2</div>
+    <!-- <div class="box" style="flex-grow:8;">3</div>
+    <div class="box" style="flex-grow:1;">4</div> -->
+    <div class="box" style="flex-shrink:5;">3</div>
+    <div class="box" style="flex-shrink:3;">4</div>
+    <div class="box">5</div>
+
+</body>
+</html>

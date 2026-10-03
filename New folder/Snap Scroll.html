@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Snap Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url("image/programming-background.jpg");
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      /*scroll-padding-left: 70px;*/
+      scroll-padding-top: 40px;
+      gap: 10px;
+      padding: 50px 70px;
+      border: 1px solid;
+    }
+
+    .item {
+      flex: 0 0 40%;
+      background: linear-gradient(45deg, tomato, orange);
+      border-radius: 15px;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      padding: 100px 0;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      scroll-margin: 10px;
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="text-align:center;">CSS Scroll Snap Demo</h2>
+
+  <div class="container">
+    <div class="item">1️⃣1🍋‍🟩🍋‍🟩🍋‍🟩🍋‍🟩☑️✅</div>
+    <div class="item">2️⃣</div>
+    <div class="item">3️⃣</div>
+    <div class="item">4️⃣</div>
+    <div class="item">5️⃣</div>
+  </div>
+
+</body>
+
+</html>

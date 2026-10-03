@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-auto-columns Example</title>
+    <style>
+        .container {
+            display: grid;
+            border: 2px solid black;
+            padding: 10px;
+
+            /* Sirf 2 columns manually define kiye */
+            grid-template-columns: 100px 100px;
+            /*grid-template-rows: 200px 150px;*/
+            /* Agar aur items aayein to naye columns bano */
+            grid-auto-columns: 180px;
+            /* Auto-created columns = 180px wide */
+
+            /* Column-wise fill karo (default row hota hai) */
+            grid-auto-flow: column;
+
+            gap: 10px;
+            justify-content: start;
+        }
+
+        .container div {
+            background: lightcoral;
+            border: 2px solid red;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>grid-auto-columns Example</h2>
+    <p><b>Note:</b> Sirf 2 columns define kiye gaye hain (100px each), lekin total 6 items diye gaye hain. <br>
+        Baaki 4 items ke liye browser naye columns banata hai — 180px width ke, kyunki
+        <code>grid-auto-columns: 180px;</code> diya gaya hai.</p>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>
