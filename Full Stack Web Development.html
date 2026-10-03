@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Syllabus</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            background-color: #0f466a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        h2:hover {
+            background-color: #2980b9;
+        }
+
+        h3 {
+            margin: 10px 0 5px 0;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            margin: 5px 0 15px 0;
+        }
+
+        .module-content {
+            display: none;
+            background-color: #ecf0f1;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Highlight key items */
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Optional: smooth collapse animation */
+        .module-content.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📘 Full Stack Web Development Syllabus</h1>
+
+    <!-- Module 1 -->
+    <h2 onclick="toggleModule('module1')">Module 1: Frontend Development Basics</h2>
+    <div class="module-content" id="module1">
+        <h3>HTML 5</h3>
+        <ul>
+            <li>Basic HTML</li>
+            <li>Formatting</li>
+            <li>Lists</li>
+            <li>Tables</li>
+            <li>Forms & Input</li>
+            <li>Links, Frames</li>
+            <li>Image, Audio, Video</li>
+            <li>Style & Semantic</li>
+            <li>Meta Info, Programming</li>
+        </ul>
+
+        <h3>CSS 3</h3>
+        <ul>
+            <li>Basic (Foundations)</li>
+            <li>Selectors</li>
+            <li>Box Model</li>
+            <li>Typography</li>
+            <li>Backgrounds</li>
+            <li>Basics & Modern Layouts</li>
+            <li>Transitions & Animations</li>
+            <li>Responsive Web Design</li>
+            <li>Scroll & Overflow Styling</li>
+            <li>CSS Variables & Functions</li>
+            <li>CSS Multi-device & Printing</li>
+            <li>Advanced Styling & Concepts</li>
+        </ul>
+
+        <h3>Bootstrap 5</h3>
+        <ul>
+            <li>Introduction & Setup</li>
+            <li>Core Concepts</li>
+            <li>Typography</li>
+            <li>Backgrounds & Borders</li>
+            <li>Layout System</li>
+            <li>Components (UI Elements)</li>
+            <li>Forms & Tables</li>
+            <li>Advanced Utilities</li>
+            <li>JavaScript Powered Components</li>
+            <li>Responsive Design Projects (Bootstrap)</li>
+        </ul>
+
+        <h3>Tailwind CSS</h3>
+        <ul>
+            <li>Introduction & Setup</li>
+            <li>Core Utilities</li>
+            <li>Typography & Text Utilities</li>
+            <li>Backgrounds & Borders</li>
+            <li>Layout & Spacing</li>
+            <li>Flexbox & Grid System</li>
+            <li>Sizing & Positioning</li>
+            <li>Transitions & Animations</li>
+            <li>Advanced Utilities</li>
+            <li>Responsive Design Projects (Tailwind)</li>
+        </ul>
+
+        <h3>JavaScript (ES6+ Features)</h3>
+        <ul>
+            <li>JavaScript Basics (Syntax, Variables, Data Types, Operators)</li>
+            <li>Control Statements (if/else, loops, switch)</li>
+            <li>Functions (Normal, Arrow Functions, Parameterized, Recursive, return)</li>
+            <li>Events & DOM Manipulation</li>
+            <li>Asynchronous JS</li>
+            <li>Error Handling</li>
+            <li>JSON Handling</li>
+            <li>Fetch API / Axios Concepts</li>
+            <li>This Keyword, Scope, Hoisting</li>
+            <li>Event Loop, Call Stack, Execution Context</li>
+        </ul>
+    </div>
+
+    <!-- Module 2 -->
+    <h2 onclick="toggleModule('module2')">Module 2: Modern Frontend</h2>
+    <div class="module-content" id="module2">
+        <h3>React JS</h3>
+        <ul>
+            <li>Introduction to React (JSX & Virtual DOM)</li>
+            <li>Core Concepts (Fundamentals)</li>
+            <li>Styling in React</li>
+            <li>React Hooks</li>
+            <li>Forms & Controlled Components</li>
+            <li>React Router</li>
+            <li>State Management</li>
+            <li>API Calls with Axios / Fetch</li>
+            <li>Redux</li>
+            <li>React + Backend Integration</li>
+            <li>Projects</li>
+        </ul>
+
+        <h3>Frontend Projects</h3>
+        <ul>
+            <li>Portfolio Website</li>
+            <li>To-Do App</li>
+            <li>Weather App</li>
+            <li>Ecommerce UI (Mini)</li>
+        </ul>
+    </div>
+
+    <!-- Module 3 -->
+    <h2 onclick="toggleModule('module3')">Module 3: Version Control & Deployment</h2>
+    <div class="module-content" id="module3">
+        <h3>Git & GitHub</h3>
+        <ul>
+            <li>Introduction</li>
+            <li>Git & GitHub - Basics</li>
+            <li>Basic GitHub Repository Hosting</li>
+        </ul>
+    </div>
+
+    <!-- Module 4 -->
+    <h2 onclick="toggleModule('module4')">Module 4: Database (CRUD Operations)</h2>
+    <div class="module-content" id="module4">
+        <h3>Database - SQL (MySQL)</h3>
+        <ul>
+            <li>Introduction of RDBMS</li>
+            <li>Database, Table Creation</li>
+            <li>Data Types</li>
+            <li>CRUD Operations</li>
+            <li>Constraints</li>
+            <li>Operators</li>
+            <li>Functions</li>
+            <li>Aggregation & Grouping</li>
+            <li>Simple Joins</li>
+        </ul>
+
+        <h3>Database - NoSQL (MongoDB)</h3>
+        <ul>
+            <li>Introduction to NoSQL</li>
+            <li>Collections & Documents</li>
+            <li>Insert, Find, Update, Delete</li>
+            <li>Query Operators</li>
+        </ul>
+    </div>
+
+    <!-- Module 5 -->
+    <h2 onclick="toggleModule('module5')">Module 5: Backend Development</h2>
+    <div class="module-content" id="module5">
+        <h3>Node JS</h3>
+        <ul>
+            <li>Introduction & Setup</li>
+            <li>NPM & Packages</li>
+            <li>File System, Events</li>
+            <li>Creating Simple Server</li>
+        </ul>
+
+        <h3>Express JS</h3>
+        <ul>
+            <li>Routing</li>
+            <li>Middleware</li>
+            <li>REST APIs</li>
+            <li>Error Handling</li>
+            <li>Authentication & Authorization</li>
+            <li>JWT / Session-based Auth</li>
+            <li>Role-based Access Control</li>
+            <li>Password Hashing (bcrypt)</li>
+        </ul>
+    </div>
+
+    <!-- Module 6 -->
+    <h2 onclick="toggleModule('module6')">Module 6: Integration & Projects</h2>
+    <div class="module-content" id="module6">
+        <ul>
+            <li>Blog Application</li>
+            <li>Ecommerce Store</li>
+            <li>Social Media App</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleModule(id) {
+            const module = document.getElementById(id);
+            module.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>
